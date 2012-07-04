@@ -1,0 +1,25 @@
+<%= form_for(@zutat) do |f| %>
+  <% if @zutat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@zutat.errors.count, "error") %> prohibited this zutat from being saved:</h2>
+
+      <ul>
+      <% @zutat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </div>
+  <div class="field">
+    <%= f.label :rezept_id %><br />
+    <%= f.text_field :rezept_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

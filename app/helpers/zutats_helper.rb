@@ -1,0 +1,2 @@
+module ZutatsHelper
+end

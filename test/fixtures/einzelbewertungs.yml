@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  typ: MyString
+  wert: 
+  bewertung_id: 
+
+two:
+  typ: MyString
+  wert: 
+  bewertung_id: 

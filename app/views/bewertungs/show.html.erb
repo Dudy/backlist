@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Text:</b>
+  <%= @bewertung.text %>
+</p>
+
+<p>
+  <b>Rezept:</b>
+  <%= @bewertung.rezept_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_bewertung_path(@bewertung) %> |
+<%= link_to 'Back', bewertungs_path %>

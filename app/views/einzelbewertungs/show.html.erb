@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Typ:</b>
+  <%= @einzelbewertung.typ %>
+</p>
+
+<p>
+  <b>Wert:</b>
+  <%= @einzelbewertung.wert %>
+</p>
+
+<p>
+  <b>Bewertung:</b>
+  <%= @einzelbewertung.bewertung_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_einzelbewertung_path(@einzelbewertung) %> |
+<%= link_to 'Back', einzelbewertungs_path %>

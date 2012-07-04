@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Text:</b>
+  <%= @zutat.text %>
+</p>
+
+<p>
+  <b>Rezept:</b>
+  <%= @zutat.rezept_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_zutat_path(@zutat) %> |
+<%= link_to 'Back', zutats_path %>

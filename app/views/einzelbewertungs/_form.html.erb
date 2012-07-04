@@ -1,0 +1,29 @@
+<%= form_for(@einzelbewertung) do |f| %>
+  <% if @einzelbewertung.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@einzelbewertung.errors.count, "error") %> prohibited this einzelbewertung from being saved:</h2>
+
+      <ul>
+      <% @einzelbewertung.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :typ %><br />
+    <%= f.text_field :typ %>
+  </div>
+  <div class="field">
+    <%= f.label :wert %><br />
+    <%= f.text_field :wert %>
+  </div>
+  <div class="field">
+    <%= f.label :bewertung_id %><br />
+    <%= f.text_field :bewertung_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

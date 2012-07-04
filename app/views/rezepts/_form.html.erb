@@ -1,0 +1,33 @@
+<%= form_for(@rezept) do |f| %>
+  <% if @rezept.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rezept.errors.count, "error") %> prohibited this rezept from being saved:</h2>
+
+      <ul>
+      <% @rezept.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :anleitung %><br />
+    <%= f.text_area :anleitung %>
+  </div>
+  <div class="field">
+    <%= f.label :rezeptname %><br />
+    <%= f.text_field :rezeptname %>
+  </div>
+  <div class="field">
+    <%= f.label :beschreibung %><br />
+    <%= f.text_area :beschreibung %>
+  </div>
+  <div class="field">
+    <%= f.label :benutzer_id %><br />
+    <%= f.text_field :benutzer_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

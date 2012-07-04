@@ -1,4 +1,16 @@
 Backlist::Application.routes.draw do
+  resources :zutats
+
+  resources :termins
+
+  resources :rezepts
+
+  resources :einzelbewertungs
+
+  resources :bewertungs
+
+  resources :benutzers
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

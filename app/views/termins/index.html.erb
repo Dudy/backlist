@@ -1,0 +1,27 @@
+<h1>Listing termins</h1>
+
+<table>
+  <tr>
+    <th>Datum</th>
+    <th>Beschreibung</th>
+    <th>Benutzer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @termins.each do |termin| %>
+  <tr>
+    <td><%= termin.datum %></td>
+    <td><%= termin.beschreibung %></td>
+    <td><%= termin.benutzer_id %></td>
+    <td><%= link_to 'Show', termin %></td>
+    <td><%= link_to 'Edit', edit_termin_path(termin) %></td>
+    <td><%= link_to 'Destroy', termin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Termin', new_termin_path %>

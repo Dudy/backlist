@@ -1,0 +1,6 @@
+rails generate scaffold Benutzer benutzername:string passwort:string vollername:string
+rails generate scaffold Bewertung text:string rezept_id:int
+rails generate scaffold Einzelbewertung typ:string wert:int bewertung_id:int
+rails generate scaffold Rezept anleitung:text rezeptname:string beschreibung:text benutzer_id:int
+rails generate scaffold Termin datum:datetime beschreibung:string benutzer_id:int
+rails generate scaffold Zutat text:string rezept_id:int
